@@ -1,0 +1,76 @@
+.header {
+    position: relative;
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+            #7ed56fcc,
+            hsla(160, 64%, 43%, 0.8)),
+        url("/img/hero.jpg");
+    /* Whatever the width of the viewport, fit the image as bestt as possible */
+    background-size: cover;
+    /* image stays at the top stays the same (?) */
+    background-position: top;
+
+    /* cuts the image to show only visible portion... */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &__logo-box {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+
+    &__logo {
+        /* only need to specifiy the height, the width will automatically be figured out by the browser s*/
+        height: 35px;
+    }
+
+    &__text-box {
+        position: absolute;
+        /* 50% the elements itself width, and height  */
+        transform: translate(-50%, -50%);
+        top: 40%;
+        left: 50%;
+        text-align: center;
+    }
+}
+
+// .heading-primary {
+//     color: $color-white;
+//     text-transform: uppercase;
+
+//     backface-visibility: hidden;
+//     margin-bottom: 60px;
+
+//     &--main {
+//         display: block;
+//         font-size: 60px;
+//         font-weight: 400;
+//         letter-spacing: 35px;
+
+//         /* two animations that are needed */
+//         /* animation-name: moveInLeft;
+//         animation-direction: 1s;
+//         animation-timing-function: ease-out; */
+//         /* animation-delay: 3s; */
+//         /* animation-iteration-count: 3; */
+
+//         animation: moveInLeft 1s ease-out;
+//     }
+
+//     &--sub {
+//         display: block;
+//         font-size: 20px;
+//         font-weight: 700;
+//         letter-spacing: 17.4px;
+
+//         /* animation-name: moveInRight;
+//         animation-direction: 1s;
+//         animation-timing-function: ease-out; */
+//         animation: moveInRight 1s ease-out;
+//     }
+// }
+
+/*
+    span are inline elements
+    block elements take up entire width
+*/

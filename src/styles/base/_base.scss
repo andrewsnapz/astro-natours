@@ -1,0 +1,18 @@
+/* _partial sass file */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* border and padding are not added to the width */
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+html {
+    /* 1 rem */
+    font-size: 62.5%;
+}

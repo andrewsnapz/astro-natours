@@ -1,0 +1,59 @@
+/* psuedo class */
+.btn:link, 
+.btn:visited {
+    position: relative;
+    display: inline-block; /* Treated as text */
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: all 0.2s; /* animate psuedo states */
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+}
+
+.btn--white {
+    background-color: $color-white;
+    color: $color-grey-dark
+}
+
+/* must specifiy content property in order for after psuedo el to work */
+/* must be behind button */
+/* after psuedo el adds a virtual element that we are selecting */
+.btn::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    z-index: -1;
+
+    transition: all .4s;
+}
+
+.btn--white::after {
+    background-color: $color-white;
+}
+
+/* on hover, add effects */
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; /* automatically apply the 0% animation */
+}
+
