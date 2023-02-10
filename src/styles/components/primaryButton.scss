@@ -46,6 +46,12 @@
     background-color: $color-white;
 }
 
+.btn--green {
+    background-color: $color-primary;
+    color: $color-white;
+}
+
+
 /* on hover, add effects */
 .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
