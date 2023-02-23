@@ -1,4 +1,5 @@
 /* psuedo class */
+.btn,
 .btn:link, 
 .btn:visited {
     position: relative;
@@ -8,6 +9,8 @@
     padding: 1.5rem 4rem;
     border-radius: 10rem;
     transition: all 0.2s; /* animate psuedo states */
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
